@@ -80,8 +80,9 @@ download_wallpapers() {
 # TODO CONTINUE
 download_icons() {
   cd /tmp 
+  mkdir -p Tela-circle-MaterialYou
   wget ${RELEASE_LINK}icons.tar.gz
-  tar -xvf icons.tar.gz
+  tar -xvf icons.tar.gz -C Tela-circle-MaterialYou
   mkdir -p ~/.local/share/icons/Tela-circle-MaterialYou
   cp -rf Tela-circle-MaterialYou ~/.local/share/icons/Tela-circle-MaterialYou
 }
