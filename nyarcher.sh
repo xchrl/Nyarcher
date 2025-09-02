@@ -42,6 +42,7 @@ install_extensions () {
   cd adwaita-material-you
   bash local-install.sh
   # Set correct permissions 
+  cd $HOME/.local/share/gnome-shell
   chmod -R 755 extensions/*
   
   # Install material you icons 
@@ -69,8 +70,9 @@ configure_neofetch() {
 
 download_wallpapers() {
   cd /tmp
+  mkdir -p wallpaper
   wget ${RELEASE_LINK}wallpaper.tar.gz
-  tar -xvf wallpaper.tar.gz
+  tar -xvf wallpaper.tar.gz -C wallpaper
   cd wallpaper 
   bash install.sh
 }
@@ -80,6 +82,7 @@ download_icons() {
   cd /tmp 
   wget ${RELEASE_LINK}icons.tar.gz
   tar -xvf icons.tar.gz
+  mkdir -p ~/.local/share/icons/Tela-circle-MaterialYou
   cp -rf Tela-circle-MaterialYou ~/.local/share/icons/Tela-circle-MaterialYou
 }
 
