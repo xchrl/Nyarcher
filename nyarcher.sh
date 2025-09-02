@@ -28,7 +28,7 @@ install_extensions () {
   mv extensions extensions-backup  # Backup old extensions 
 
   get_tarball
-  cp -rf /tmp/NyarchLinux/Gnome/etc/skel/.local/share/gnome-shell/extensions ~/.local/share/gnome-shell
+  cp -rf /tmp/NyarchLinuxComp/Gnome/etc/skel/.local/share/gnome-shell/extensions ~/.local/share/gnome-shell
   
   # Install material you
   cd /tmp
@@ -45,7 +45,7 @@ install_extensions () {
   chmod -R 755 extensions/*
   
   # Install material you icons 
-  cp -rf /tmp/NyarchLinux/Gnome/etc/skel/.config/nyarch ~/.config
+  cp -rf /tmp/NyarchLinuxComp/Gnome/etc/skel/.config/nyarch ~/.config
   cd ~/.config/nyarch
   git clone https://github.com/vinceliuice/Tela-circle-icon-theme
 }
@@ -64,7 +64,7 @@ configure_neofetch() {
   get_tarball
   mv ~/.config/fastfetch ~/.config/fastfetch-backup  # Backup previous fastfetch
   # Install new fastfetch files
-  cp -rf /tmp/NyarchLinux/Gnome/etc/skel/.config/fastfetch ~/.config
+  cp -rf /tmp/NyarchLinuxComp/Gnome/etc/skel/.config/fastfetch ~/.config
 }
 
 download_wallpapers() {
@@ -87,13 +87,13 @@ set_themes() {
   cd ~/.local/share
   mv themes themes-backup  # Backup icons
   get_tarball
-  cp -rf /tmp/NyarchLinux/Gnome/etc/skel/.local/share/themes ~/.local/share
+  cp -rf /tmp/NyarchLinuxComp/Gnome/etc/skel/.local/share/themes ~/.local/share
   cd ~/.config
   # Set GTK4 and GTK3 themes
   mv gtk-3.0 gtk-3.0-backup
   mv gtk-4.0 gtk-4.0-backup
-  cp -rf /tmp/NyarchLinux/Gnome/etc/skel/.config/gtk-3.0 ~/.config
-  cp -rf /tmp/NyarchLinux/Gnome/etc/skel/.config/gtk-4.0 ~/.config
+  cp -rf /tmp/NyarchLinuxComp/Gnome/etc/skel/.config/gtk-3.0 ~/.config
+  cp -rf /tmp/NyarchLinuxComp/Gnome/etc/skel/.config/gtk-4.0 ~/.config
 }
 
 configure_kitty (){
@@ -161,7 +161,7 @@ install_nyarch_apps() {
 
   # Install Waifu Downloader
   cd /tmp 
-  wget https://github.com/nyarchlinux/waifu-downloader/releases/latest/download/waifudownloader.flatpak
+  wget https://github.com/nyarchlinux/waifudownloader/releases/latest/download/waifudownloader.flatpak
   flatpak install waifudownloader.flatpak
   
 }
@@ -186,7 +186,7 @@ configure_gsettings() {
   cd /tmp
   # Download default settings
   get_tarball
-  cd /tmp/NyarchLinux/Gnome/etc/dconf/db/local.d
+  cd /tmp/NyarchLinuxComp/Gnome/etc/dconf/db/local.d
   # Load settings
   dconf load / < 06-extensions  # Load extensions settings
   dconf load / < 02-interface  # Load theme settings
