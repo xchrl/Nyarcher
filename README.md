@@ -35,7 +35,7 @@ If you want to learn what the script does, you can read [NYARCHER.md](https://gi
 <br />
 Download `nyarcher.sh` and add the permission of execution, then execute it
 ```bash
-git clone https://github.com/NyarchLinux/Nyarcher.git
+git clone https://github.com/xchrl/Nyarcher.git
 cd Nyarcher
 chmod +x nyarcher.sh
 ./nyarcher.sh
